@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scraped News</title>
+</head>
+<body>
+    {% load custom_filter %}
+
+    <h1>Latest News Articles</h1>
+    <ul>
+        {% for author,quote in authors|zip_lists:quotes %}
+            <li>{{ author }} - {{quote}}</li>
+            <h1> </h1>
+        {% endfor %}
+    </ul>
+</body>
+</html>
